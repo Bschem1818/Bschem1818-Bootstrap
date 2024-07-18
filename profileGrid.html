@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram - Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="modal fade" id="createNewPostModal" tabindex="-1" aria-labelledby="createNewPostModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create a new post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <span><Strong>Caption:</Strong></span>
+                    <input type="text" class="form-control" id="captionInput" placeholder="Add the caption of your post here">
+                    <div class="container">
+                        <div class="row">
+                            <div class="border border-dark rounded-1 col-1">
+                                <a><i class="fas fa-camera"></i></a>
+                            </div>
+                            <div class="border border-dark rounded-1 col-1">
+                                <a><i class="fas fa-map-marker-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary">Close</button>
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Publish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <!-- Esta parte es mi navegacion -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                <button type="button" class="btn btn-success me-2 ms-auto" data-bs-toggle="modal" data-bs-target="#createNewPostModal">Create a new post</button>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-cog"></i> 
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                        <li><a class="dropdown-item" href="#">Privacy and data</a></li>
+                        <hr class="my-4">
+                        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!--  Botones para cambiar vistas -->
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" href="profileGrid.html"><i class="fas fa-th"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link navLinkInactive" href="index.html"><i class="fas fa-square"></i></a>
+            </li>
+        </ul>
+        <!-- Grid de fotos -->
+        <div class="container">
+            <!-- Primer row de fotos -->
+            <div class="row mb-4">
+                <div class="col-4">
+                    <img class="img-fluid" src="https://labyes.com/wp-content/uploads/2020/06/PROTECH_Banner_SitioWeb_Perro_-1-1-732x732.jpg" alt="Model dog">
+                </div>
+                <div class="col-4">
+                    <img class="img-fluid" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/2fc56934073232.56c33cf863075.jpg" alt="Laying dog">
+                </div>
+                <div class="col-4">
+                    <img class="img-fluid" src="https://lakeshoredogfence.com/wp-content/uploads/elementor/thumbs/happy-dog-1280x960-1-1-p5yo87qhdhss7s31wgjg0b3n8lvdta1ucot5ty9lyo.jpg" alt="Jumping dog">
+                </div>
+            </div>
+             <!-- Segundo row de fotos -->
+            <div class="row mb-4">
+                <div class="col-4">
+                    <img class="img-fluid" src="https://img.freepik.com/premium-photo/happy-dog-running-big-park-with-big-trees-blue_643382-2000.jpg" alt="Happy dog">
+                </div>
+                <div class="col-4">
+                    <img class="img-fluid" src="https://img.freepik.com/premium-photo/ai-generative-high-quality-photo-happy-dog-playing-ball-grass_786887-1254.jpg" alt="Excited dog">
+                </div>
+                <div class="col-4">
+                    <img class="img-fluid" src="https://g1.img-dpreview.com/FF9CE2684532407EA326F7E9562EB91A.jpg" alt="Jumping dog">
+                </div>
+            </div>
+            <!-- Tercer row de fotos -->
+            <div class="row mb-4">
+                <div class="col-4">
+                    <img class="img-fluid" src="https://g2.img-dpreview.com/81C81CB44922409EA3C99FA3E42369CD.jpg" alt="Model dog">
+                </div>
+                <div class="col-4">
+                    <img class="img-fluid" src="https://www.greatmats.com/images/ultimate-turf-grass/ultimatepet/dogs-love-artificial-turf.jpg" alt="Laying dog">
+                </div>
+                <div class="col-4">
+                    <img class="img-fluid" src="https://img.freepik.com/premium-photo/happy-dog-running-field-flowers_604472-28371.jpg" alt="Smiling dog">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
